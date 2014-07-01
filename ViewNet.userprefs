@@ -1,0 +1,20 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewNet/Properties/AssemblyInfo.cs">
+    <Files>
+      <File FileName="ViewNet/Properties/AssemblyInfo.cs" Line="11" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="ViewNet/Cryptography/DHToAES256Manager.cs" line="217" offsetX="663" offsetY="4206" expression="CryptoCycle" liveUpdate="False" />
+    <Watch file="ViewNet/Cryptography/DHToAES256Manager.cs" line="303" offsetX="794" offsetY="5738" expression="alg" liveUpdate="False" />
+    <Watch file="ViewNet/Utility/ByteServiceStream.cs" line="88" offsetX="688" offsetY="1914" expression="genericMethodInfo" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <DisabledProjects>
+    <String>ViewNetFrontEnd/ViewNetFrontEnd.csproj</String>
+    <String>ViewNetDrone/ViewNetDrone.csproj</String>
+  </DisabledProjects>
+</Properties>

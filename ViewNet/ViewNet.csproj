@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{39AA794B-B1D5-4CAA-9D20-F67F5832CD7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ViewNet</RootNamespace>
+    <AssemblyName>ViewNet</AssemblyName>
+    <Description>A software that utilize encrypted socket to perform all kinds of services including File Sharing, Remote Procedure Calls, SQL Connection, System Monitoring, Mass Software Install, and variety of tasks.</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Salar.Bois">
+      <HintPath>..\TestConsole\bin\Debug\Salar.Bois.dll</HintPath>
+    </Reference>
+    <Reference Include="IntXLib">
+      <HintPath>bin\Debug\IntXLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Network\PacketType.cs" />
+    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Utility\DataUtility.cs" />
+    <Compile Include="Domain\DomainManager.cs" />
+    <Compile Include="Security\User.cs" />
+    <Compile Include="Security\Permission.cs" />
+    <Compile Include="Security\Group.cs" />
+    <Compile Include="Security\IVertifyIO.cs" />
+    <Compile Include="Security\FilePermission.cs" />
+    <Compile Include="Security\DirectoryPermission.cs" />
+    <Compile Include="DomainService\IDomainService.cs" />
+    <Compile Include="Cryptography\ICryptoManager.cs" />
+    <Compile Include="Domain\CryptoStandard.cs" />
+    <Compile Include="Cryptography\NoCryptoManager.cs" />
+    <Compile Include="Utility\DiffieHellman.cs" />
+    <Compile Include="Cryptography\DHToAES256Manager.cs" />
+    <Compile Include="Network\IViewClient.cs" />
+    <Compile Include="Service\ServiceManager.cs" />
+    <Compile Include="Domain\DSIdentifier.cs" />
+    <Compile Include="Service\ServiceCallTypes.cs" />
+    <Compile Include="Utility\ByteServiceStream.cs" />
+    <Compile Include="Service\Monitor Service\FullSystemMonitor.cs" />
+    <Compile Include="Service\IO Services\IOService.cs" />
+    <Compile Include="Service\Relay\RelayService.cs" />
+    <Compile Include="Service\ServiceObjects\MAddService.cs" />
+    <Compile Include="Service\ServiceObjects\MRemoveService.cs" />
+    <Compile Include="Service\ServiceObjects\MServiceRead.cs" />
+    <Compile Include="Service\ServiceObjects\MServiceMismatch.cs" />
+    <Compile Include="Service\TestService\TestService.cs" />
+    <Compile Include="Service\Process Service\ProcessService.cs" />
+    <Compile Include="Cache\Caches.cs" />
+    <Compile Include="Security\ConnectionEntity.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\MGreet.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\MLogin.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\RGreet.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\RBlacklisted.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\RLogin.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\MRegister.cs" />
+    <Compile Include="Service\ServiceObjects\Handshake\RRegister.cs" />
+    <Compile Include="Cryptography\AES256Manager.cs" />
+    <Compile Include="Network\ViewSCTPClient.cs" />
+    <Compile Include="Network\ViewUDPClient.cs" />
+    <Compile Include="Network\ViewTCPClient.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Service\ServiceTemplate.cs" />
+    <None Include="Logger\LoggerAgent.cs" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Logger\" />
+    <Folder Include="Service\ServiceObjects\Handshake\" />
+  </ItemGroup>
+</Project>
