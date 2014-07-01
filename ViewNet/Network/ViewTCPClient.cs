@@ -46,7 +46,7 @@ namespace ViewNet
 		#region Constructors
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="ViewNet.ViewTcpClient"/> class.
+		/// Initializes a new instance of the <see cref="ViewNet.ViewTCPClient"/> class.
 		/// </summary>
 		/// <param name="ip">Ip.</param>
 		/// <param name="port">Port.</param>
@@ -62,7 +62,7 @@ namespace ViewNet
 		}
 			
 		/// <summary>
-		/// Initializes a new instance of the <see cref="ViewNet.ViewTcpClient"/> class.
+		/// Initializes a new instance of the <see cref="ViewNet.ViewTCPClient"/> class.
 		/// </summary>
 		/// <param name="tcpclient">Tcpclient.</param>
 		public ViewTCPClient (TcpClient tcpclient)

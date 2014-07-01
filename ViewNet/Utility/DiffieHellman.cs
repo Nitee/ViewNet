@@ -21,7 +21,7 @@ namespace ViewNet
 		/// <summary>
 		/// The number of bytes to generate.
 		/// </summary>
-		int bytes = 65536;
+		int bytes = 256;
 		/// <summary>
 		/// The shared prime.
 		/// </summary>
