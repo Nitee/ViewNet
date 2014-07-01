@@ -21,7 +21,7 @@ namespace ViewNet
 		/// <summary>
 		/// The number of bytes to generate.
 		/// </summary>
-		int bytes = 256;
+		int bytes = 128;
 		/// <summary>
 		/// The shared prime.
 		/// </summary>
@@ -213,7 +213,6 @@ namespace ViewNet
 		{
 			p = null;
 			g = null;
-			GC.Collect ();
 		}
 
 		#endregion
