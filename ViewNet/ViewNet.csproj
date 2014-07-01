@@ -33,11 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Salar.Bois">
-      <HintPath>..\TestConsole\bin\Debug\Salar.Bois.dll</HintPath>
-    </Reference>
     <Reference Include="IntXLib">
       <HintPath>bin\Debug\IntXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Salar">
+      <HintPath>..\TestConsole\bin\Debug\Salar.Bois.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
